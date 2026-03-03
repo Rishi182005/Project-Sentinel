@@ -223,13 +223,13 @@
             <th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th>
         </tr></thead>
         <tbody>
-            <tr><td class="ch">Human</td><td>0.9304</td><td>0.625</td><td>0.7477</td><td>1,048</td></tr>
-            <tr><td class="cb">Bot</td><td>0.7635</td><td>0.9628</td><td>0.8517</td><td>1,318</td></tr>
+            <tr><td class="ch">Human</td><td>0.9303</td><td>0.624</td><td>0.747</td><td>1,048</td></tr>
+            <tr><td class="cb">Bot</td><td>0.7631</td><td>0.9628</td><td>0.8514</td><td>1,318</td></tr>
             <tr style="border-top:1px solid var(--border)">
-            <td class="cm">Macro Avg</td><td>0.847</td><td>0.7939</td><td>0.7997</td><td>2,366</td>
+            <td class="cm">Macro Avg</td><td>0.8467</td><td>0.7934</td><td>0.7992</td><td>2,366</td>
             </tr>
             <tr>
-            <td class="cw">Weighted Avg</td><td>0.8374</td><td>0.8132</td><td>0.8056</td><td>2,366</td>
+            <td class="cw">Weighted Avg</td><td>0.8371</td><td>0.8128</td><td>0.8052</td><td>2,366</td>
             </tr>
         </tbody>
         </table>
@@ -264,8 +264,8 @@
         <div class="cmlegend">
             <div class="legrow">
             <div class="legsq" style="background:rgba(0,255,157,.1);border-color:var(--human);"></div>
-            <div class="legtxt"><strong style="color:var(--human)">True Human (655)</strong><br>
-                Correctly kept as human.<br>Precision: 0.9304</div>
+            <div class="legtxt"><strong style="color:var(--human)">True Human (654)</strong><br>
+                Correctly kept as human.<br>Precision: 0.9303</div>
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(0,255,157,.06);border-color:var(--accent);"></div>
@@ -274,8 +274,8 @@
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(255,77,109,.1);border-color:var(--bot);"></div>
-            <div class="legtxt"><strong style="color:var(--bot)">False Bot (393)</strong><br>
-                Humans flagged as bots.<br>37.5% false alarm rate</div>
+            <div class="legtxt"><strong style="color:var(--bot)">False Bot (394)</strong><br>
+                Humans flagged as bots.<br>37.6% false alarm rate</div>
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(255,153,0,.08);border-color:var(--warn);"></div>
@@ -289,7 +289,7 @@
         <div style="margin-top:22px;">
         <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--dim);
             letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">
-            ROC Curve &nbsp;<span style="color:var(--accent)">AUC = 0.8656</span>
+            ROC Curve &nbsp;<span style="color:var(--accent)">AUC = 0.8646</span>
         </div>
         <canvas id="rocChart" width="310" height="170"></canvas>
         </div>
@@ -325,7 +325,7 @@
         <div class="aitem">
             <div class="atitle"><div class="adot" style="background:#38bdf8;box-shadow:0 0 5px #38bdf8;"></div>Profile Authenticity</div>
             <div class="ascore" style="color:var(--accent4)">KEY</div>
-            <div class="adesc">verified dominates at 81.5% importance. Description length, URL presence, digit-heavy usernames also separate real vs. fake accounts.</div>
+            <div class="adesc">verified dominates at 81.4% importance. Description length, URL presence, digit-heavy usernames also separate real vs. fake accounts.</div>
         </div>
         <div class="aitem">
             <div class="atitle"><div class="adot" style="background:#a78bfa;box-shadow:0 0 5px #a78bfa;"></div>Network Signals</div>
@@ -374,7 +374,7 @@
         <div class="aarrow">→</div>
         <div class="anode" style="border-top:3px solid #ff4d6d;">
         <div class="ant">Evaluation</div>
-        <div class="and">81.3% accuracy<br>0.8656 AUC-ROC<br>Classification rpt</div>
+        <div class="and">81.3% accuracy<br>0.8646 AUC-ROC<br>Classification rpt</div>
         </div>
         <div class="aarrow">→</div>
         <div class="anode" style="border-top:3px solid #e879f9;">
@@ -390,8 +390,8 @@
         Model: XGBoost · Dataset: TwiBot-20 · Features: 27 dimensions</div>
     <div class="fr">
         <span>ACC: 81.3%</span>
-        <span>AUC: 0.8656</span>
-        <span>F1-Bot: 0.8517</span>
+        <span>AUC: 0.8646</span>
+        <span>F1-Bot: 0.8514</span>
         <span>N: 11,826</span>
     </div>
     </footer>
@@ -399,24 +399,24 @@
 
     <script>
     // ─── DATA FROM PYTHON ─────────────────────────────────────
-    const ACCURACY  = 81.3187;
-    const AUC       = 0.8656;
+    const ACCURACY  = 81.2764;
+    const AUC       = 0.8646;
     const BOT_REC   = 0.9628;
-    const HUM_PREC  = 0.9304;
+    const HUM_PREC  = 0.9303;
     const TOTAL     = 11826;
-    const TN = 655, FP = 393, FN = 49, TP = 1269;
+    const TN = 654, FP = 394, FN = 49, TP = 1269;
 
-    const FEATURES  = [["verified", 0.8147503137588501], ["description_length", 0.01503655593842268], ["has_url", 0.014741381630301476], ["listed_count", 0.013783392496407032], ["followers_count", 0.013108481653034687], ["friends_count", 0.012800994329154491], ["tweet_count", 0.012746118940412998], ["follower_following_ratio", 0.012599044479429722], ["statuses_count", 0.012458165176212788], ["favourites_count", 0.012172087095677853], ["following_follower_ratio", 0.011950487270951271], ["account_age_days", 0.011893091723322868], ["engagement_rate", 0.011164018884301186], ["username_digit_ratio", 0.010550105012953281], ["name_length", 0.010509321466088295]];
-    const USERS     = [{"handle": "SHAQ", "botProb": 0.1, "authScore": 99.9, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 15349596, "verified": true, "descLen": 50, "accountAge": 6313}, {"handle": "JenniferFishpaw", "botProb": 63.38, "authScore": 36.62, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 0, "verified": false, "descLen": 0, "accountAge": 2017}, {"handle": "parscale", "botProb": 0.07, "authScore": 99.93, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 762839, "verified": true, "descLen": 160, "accountAge": 6304}, {"handle": "FOX13News", "botProb": 0.11, "authScore": 99.89, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 327587, "verified": true, "descLen": 160, "accountAge": 6417}, {"handle": "VonteThePlugNC", "botProb": 75.62, "authScore": 24.38, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 13324, "verified": false, "descLen": 103, "accountAge": 4587}, {"handle": "SpaceX", "botProb": 0.07, "authScore": 99.93, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 12601567, "verified": true, "descLen": 90, "accountAge": 6157}, {"handle": "justinbieber", "botProb": 0.11, "authScore": 99.89, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 112403156, "verified": true, "descLen": 0, "accountAge": 6183}, {"handle": "McConaughey", "botProb": 0.04, "authScore": 99.96, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 2656850, "verified": true, "descLen": 82, "accountAge": 6074}];
-    const ROC       = {"fpr": [0.0, 0.0038, 0.0134, 0.02, 0.0248, 0.0296, 0.0353, 0.041, 0.0468, 0.0525, 0.0582, 0.0639, 0.0697, 0.0744, 0.0792, 0.0849, 0.0897, 0.0973, 0.105, 0.1107, 0.1155, 0.1231, 0.1279, 0.1345, 0.1393, 0.1441, 0.1517, 0.1613, 0.166, 0.1727, 0.1794, 0.1861, 0.1918, 0.1994, 0.2052, 0.2109, 0.2166, 0.2214, 0.229, 0.2338, 0.2414, 0.25, 0.2576, 0.2643, 0.2719, 0.2777, 0.2891, 0.2948, 0.3025, 0.3092, 0.3149, 0.3206, 0.3292, 0.3387, 0.3464, 0.3521, 0.3607, 0.376, 0.3845, 0.3979, 0.4055, 0.416, 0.4313, 1.0], "tpr": [0.0, 0.0326, 0.0766, 0.1123, 0.1737, 0.2071, 0.2534, 0.2762, 0.302, 0.33, 0.3452, 0.3642, 0.3816, 0.4082, 0.4256, 0.4446, 0.4697, 0.4788, 0.5076, 0.5235, 0.5364, 0.5539, 0.5698, 0.5873, 0.5994, 0.6123, 0.6313, 0.6419, 0.651, 0.6631, 0.6836, 0.692, 0.7117, 0.7253, 0.7436, 0.7511, 0.764, 0.7754, 0.7868, 0.7967, 0.8149, 0.824, 0.8392, 0.846, 0.8558, 0.8627, 0.8695, 0.8771, 0.8847, 0.893, 0.9006, 0.9158, 0.9241, 0.9325, 0.9401, 0.9484, 0.9583, 0.9643, 0.9727, 0.9803, 0.9848, 0.9917, 0.9962, 1.0]};
+    const FEATURES  = [["verified", 0.8143983483314514], ["has_url", 0.015345316380262375], ["description_length", 0.015184237621724606], ["tweet_count", 0.013388066552579403], ["listed_count", 0.01335227396339178], ["friends_count", 0.012919222936034203], ["statuses_count", 0.012639631517231464], ["followers_count", 0.01262772548943758], ["following_follower_ratio", 0.012481898069381714], ["follower_following_ratio", 0.012441860511898994], ["favourites_count", 0.011867674067616463], ["account_age_days", 0.011602120473980904], ["engagement_rate", 0.011039233766496181], ["name_length", 0.010624555870890617], ["username_digit_ratio", 0.010249889455735683]];
+    const USERS     = [{"handle": "SHAQ", "botProb": 0.15, "authScore": 99.85, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 15349596, "verified": true, "descLen": 50, "accountAge": 6313}, {"handle": "JenniferFishpaw", "botProb": 62.24, "authScore": 37.76, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 0, "verified": false, "descLen": 0, "accountAge": 2018}, {"handle": "parscale", "botProb": 0.09, "authScore": 99.91, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 762839, "verified": true, "descLen": 160, "accountAge": 6304}, {"handle": "FOX13News", "botProb": 0.14, "authScore": 99.86, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 327587, "verified": true, "descLen": 160, "accountAge": 6417}, {"handle": "VonteThePlugNC", "botProb": 74.28, "authScore": 25.72, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 13324, "verified": false, "descLen": 103, "accountAge": 4588}, {"handle": "SpaceX", "botProb": 0.08, "authScore": 99.92, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 12601567, "verified": true, "descLen": 90, "accountAge": 6157}, {"handle": "justinbieber", "botProb": 0.12, "authScore": 99.88, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 112403156, "verified": true, "descLen": 0, "accountAge": 6183}, {"handle": "McConaughey", "botProb": 0.06, "authScore": 99.94, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 2656850, "verified": true, "descLen": 82, "accountAge": 6074}];
+    const ROC       = {"fpr": [0.0, 0.0038, 0.0086, 0.0143, 0.0191, 0.0239, 0.0286, 0.0344, 0.0391, 0.0477, 0.0525, 0.0573, 0.063, 0.0687, 0.0744, 0.0792, 0.0859, 0.0916, 0.0983, 0.105, 0.1097, 0.1155, 0.1221, 0.1269, 0.1384, 0.1431, 0.1498, 0.1584, 0.166, 0.1708, 0.1765, 0.187, 0.1918, 0.1975, 0.2042, 0.2099, 0.2176, 0.2252, 0.2319, 0.2376, 0.2471, 0.2538, 0.2595, 0.2653, 0.2748, 0.2834, 0.2901, 0.2996, 0.3053, 0.312, 0.3187, 0.3244, 0.3302, 0.3397, 0.3492, 0.3597, 0.3702, 0.3788, 0.3912, 0.3979, 0.4094, 0.417, 1.0], "tpr": [0.0, 0.0425, 0.0599, 0.0979, 0.1297, 0.1586, 0.2117, 0.2284, 0.2656, 0.2876, 0.3171, 0.3392, 0.3741, 0.3961, 0.4135, 0.4325, 0.4393, 0.4613, 0.4757, 0.5053, 0.5349, 0.5448, 0.5501, 0.585, 0.6002, 0.6108, 0.6199, 0.6381, 0.6525, 0.6677, 0.6722, 0.692, 0.7109, 0.7178, 0.7367, 0.7443, 0.7557, 0.7716, 0.7921, 0.8042, 0.8111, 0.8217, 0.8308, 0.8414, 0.8467, 0.852, 0.8627, 0.868, 0.8839, 0.8961, 0.9105, 0.9181, 0.9294, 0.934, 0.9439, 0.9537, 0.9598, 0.9666, 0.975, 0.9795, 0.9886, 0.9939, 1.0]};
 
     const RADAR_VALS = [
-    0.9304, // Human Precision
-    0.6250,  // Human Recall
-    0.7635, // Bot Precision
+    0.9303, // Human Precision
+    0.6240,  // Human Recall
+    0.7631, // Bot Precision
     0.9628,  // Bot Recall
-    0.8517,   // F1 Bot
-    0.8656,    // AUC-ROC
+    0.8514,   // F1 Bot
+    0.8646,    // AUC-ROC
     ];
 
     // ─── ANIMATED COUNTERS ───────────────────────────────────
