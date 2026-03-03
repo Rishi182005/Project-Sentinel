@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0129)file:///C:/Users/rishi/OneDrive/Desktop/college/winter_sem%2025-26/behavior_analaytics/hackathon/Sentinel/sentinel_dashboard.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENTINEL — Fake Engagement Detection</title>
-    <link href="./sentinel_dashboard_files/css2" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
     :root{
     --bg:#030712;--surface:#0d1117;--surface2:#161b22;--border:#21262d;
@@ -186,27 +186,27 @@
     <div class="strip">
     <div class="mcell" style="--c:var(--accent)">
         <div class="mlabel">Accuracy</div>
-        <div class="mval" id="m0">81.4%</div>
+        <div class="mval" id="m0">0%</div>
         <div class="msub">held-out test set</div>
     </div>
     <div class="mcell" style="--c:var(--accent4)">
         <div class="mlabel">AUC-ROC</div>
-        <div class="mval" id="m1">0.8640</div>
+        <div class="mval" id="m1">0.00</div>
         <div class="msub">discrimination power</div>
     </div>
     <div class="mcell" style="--c:var(--bot)">
         <div class="mlabel">Bot Recall</div>
-        <div class="mval" id="m2">96.4%</div>
+        <div class="mval" id="m2">0%</div>
         <div class="msub">bots caught</div>
     </div>
     <div class="mcell" style="--c:var(--human)">
         <div class="mlabel">Human Precision</div>
-        <div class="mval" id="m3">93.2%</div>
+        <div class="mval" id="m3">0%</div>
         <div class="msub">true human rate</div>
     </div>
     <div class="mcell" style="--c:var(--accent3)">
         <div class="mlabel">Total Accounts</div>
-        <div class="mval" id="m4">11826</div>
+        <div class="mval" id="m4">0</div>
         <div class="msub">55.7% bots · 44.3% humans</div>
     </div>
     </div>
@@ -223,18 +223,18 @@
             <th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th>
         </tr></thead>
         <tbody>
-            <tr><td class="ch">Human</td><td>0.9317</td><td>0.625</td><td>0.7481</td><td>1,048</td></tr>
-            <tr><td class="cb">Bot</td><td>0.7637</td><td>0.9636</td><td>0.8521</td><td>1,318</td></tr>
+            <tr><td class="ch">Human</td><td>0.9304</td><td>0.625</td><td>0.7477</td><td>1,048</td></tr>
+            <tr><td class="cb">Bot</td><td>0.7635</td><td>0.9628</td><td>0.8517</td><td>1,318</td></tr>
             <tr style="border-top:1px solid var(--border)">
-            <td class="cm">Macro Avg</td><td>0.8477</td><td>0.7943</td><td>0.8001</td><td>2,366</td>
+            <td class="cm">Macro Avg</td><td>0.847</td><td>0.7939</td><td>0.7997</td><td>2,366</td>
             </tr>
             <tr>
-            <td class="cw">Weighted Avg</td><td>0.8381</td><td>0.8136</td><td>0.806</td><td>2,366</td>
+            <td class="cw">Weighted Avg</td><td>0.8374</td><td>0.8132</td><td>0.8056</td><td>2,366</td>
             </tr>
         </tbody>
         </table>
         <div style="margin-top:24px;">
-        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:9px;color:var(--dim);
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--dim);
             letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Metrics Radar</div>
         <canvas id="radarChart" width="310" height="220"></canvas>
         </div>
@@ -247,30 +247,30 @@
         </div>
         <div class="cmwrap">
         <div>
-            <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8px;color:var(--dim);
+            <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--dim);
             letter-spacing:1px;text-align:center;margin-bottom:8px;">PREDICTED →</div>
             <div class="cmatrix">
             <div class="cmlbl"></div>
             <div class="cmlbl">Human</div>
             <div class="cmlbl">Bot</div>
             <div class="cmlbl" style="writing-mode:vertical-lr;transform:rotate(180deg)">ACTUAL</div>
-            <div class="cmcell tp"><div class="cmnum" id="cm0">655</div><div class="cmsub">True Human</div></div>
-            <div class="cmcell fp"><div class="cmnum" id="cm1">393</div><div class="cmsub">False Bot</div></div>
+            <div class="cmcell tp"><div class="cmnum" id="cm0">0</div><div class="cmsub">True Human</div></div>
+            <div class="cmcell fp"><div class="cmnum" id="cm1">0</div><div class="cmsub">False Bot</div></div>
             <div style=""></div>
-            <div class="cmcell fn"><div class="cmnum" id="cm2">48</div><div class="cmsub">Missed Bot</div></div>
-            <div class="cmcell tn"><div class="cmnum" id="cm3">1270</div><div class="cmsub">True Bot</div></div>
+            <div class="cmcell fn"><div class="cmnum" id="cm2">0</div><div class="cmsub">Missed Bot</div></div>
+            <div class="cmcell tn"><div class="cmnum" id="cm3">0</div><div class="cmsub">True Bot</div></div>
             </div>
         </div>
         <div class="cmlegend">
             <div class="legrow">
             <div class="legsq" style="background:rgba(0,255,157,.1);border-color:var(--human);"></div>
             <div class="legtxt"><strong style="color:var(--human)">True Human (655)</strong><br>
-                Correctly kept as human.<br>Precision: 0.9317</div>
+                Correctly kept as human.<br>Precision: 0.9304</div>
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(0,255,157,.06);border-color:var(--accent);"></div>
-            <div class="legtxt"><strong style="color:var(--accent)">True Bot (1,270)</strong><br>
-                Bots correctly caught.<br>Recall: 0.9636</div>
+            <div class="legtxt"><strong style="color:var(--accent)">True Bot (1,269)</strong><br>
+                Bots correctly caught.<br>Recall: 0.9628</div>
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(255,77,109,.1);border-color:var(--bot);"></div>
@@ -279,17 +279,17 @@
             </div>
             <div class="legrow">
             <div class="legsq" style="background:rgba(255,153,0,.08);border-color:var(--warn);"></div>
-            <div class="legtxt"><strong style="color:var(--warn)">Missed Bot (48)</strong><br>
-                Bots slipping through.<br>3.6% escape rate</div>
+            <div class="legtxt"><strong style="color:var(--warn)">Missed Bot (49)</strong><br>
+                Bots slipping through.<br>3.7% escape rate</div>
             </div>
         </div>
         </div>
 
         <!-- ROC CURVE -->
         <div style="margin-top:22px;">
-        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:9px;color:var(--dim);
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--dim);
             letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">
-            ROC Curve &nbsp;<span style="color:var(--accent)">AUC = 0.8640</span>
+            ROC Curve &nbsp;<span style="color:var(--accent)">AUC = 0.8656</span>
         </div>
         <canvas id="rocChart" width="310" height="170"></canvas>
         </div>
@@ -303,97 +303,7 @@
         <div class="pt">Feature Importance</div>
         <div class="pbadge" style="color:var(--accent3);border-color:var(--accent3)">27 features</div>
         </div>
-        <div id="featBars"><div class="frow" style="animation-delay: 0s;">
-        <div class="fname">verified</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb0" style="width: 100%; background: rgba(0, 255, 157, 0.125); border-right: 2px solid rgb(0, 255, 157);">
-            <span class="fscore">0.8157</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.04s;">
-        <div class="fname">description_length</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb1" style="width: 1.83264%; background: rgba(56, 189, 248, 0.125); border-right: 2px solid rgb(56, 189, 248);">
-            <span class="fscore">0.0149</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.08s;">
-        <div class="fname">has_url</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb2" style="width: 1.78186%; background: rgba(56, 189, 248, 0.125); border-right: 2px solid rgb(56, 189, 248);">
-            <span class="fscore">0.0145</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.12s;">
-        <div class="fname">listed_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb3" style="width: 1.67461%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0137</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.16s;">
-        <div class="fname">tweet_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb4" style="width: 1.63724%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0134</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.2s;">
-        <div class="fname">friends_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb5" style="width: 1.57364%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0128</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.24s;">
-        <div class="fname">followers_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb6" style="width: 1.56203%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0127</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.28s;">
-        <div class="fname">statuses_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb7" style="width: 1.51829%; background: rgba(255, 153, 0, 0.125); border-right: 2px solid rgb(255, 153, 0);">
-            <span class="fscore">0.0124</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.32s;">
-        <div class="fname">favourites_count</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb8" style="width: 1.50166%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0122</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.36s;">
-        <div class="fname">follower_following_ratio</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb9" style="width: 1.46409%; background: rgba(255, 153, 0, 0.125); border-right: 2px solid rgb(255, 153, 0);">
-            <span class="fscore">0.0119</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.4s;">
-        <div class="fname">account_age_days</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb10" style="width: 1.46306%; background: rgba(167, 139, 250, 0.125); border-right: 2px solid rgb(167, 139, 250);">
-            <span class="fscore">0.0119</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.44s;">
-        <div class="fname">following_follower_ratio</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb11" style="width: 1.46168%; background: rgba(255, 153, 0, 0.125); border-right: 2px solid rgb(255, 153, 0);">
-            <span class="fscore">0.0119</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.48s;">
-        <div class="fname">engagement_rate</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb12" style="width: 1.38523%; background: rgba(255, 153, 0, 0.125); border-right: 2px solid rgb(255, 153, 0);">
-            <span class="fscore">0.0113</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.52s;">
-        <div class="fname">name_length</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb13" style="width: 1.29784%; background: rgba(56, 189, 248, 0.125); border-right: 2px solid rgb(56, 189, 248);">
-            <span class="fscore">0.0106</span>
-        </div>
-        </div></div><div class="frow" style="animation-delay: 0.56s;">
-        <div class="fname">username_digit_ratio</div>
-        <div class="fwrap">
-        <div class="fbar" id="fb14" style="width: 1.25505%; background: rgba(56, 189, 248, 0.125); border-right: 2px solid rgb(56, 189, 248);">
-            <span class="fscore">0.0102</span>
-        </div>
-        </div></div></div>
+        <div id="featBars"></div>
     </div>
 
     <div class="panel">
@@ -415,7 +325,7 @@
         <div class="aitem">
             <div class="atitle"><div class="adot" style="background:#38bdf8;box-shadow:0 0 5px #38bdf8;"></div>Profile Authenticity</div>
             <div class="ascore" style="color:var(--accent4)">KEY</div>
-            <div class="adesc">verified dominates at 81.6% importance. Description length, URL presence, digit-heavy usernames also separate real vs. fake accounts.</div>
+            <div class="adesc">verified dominates at 81.5% importance. Description length, URL presence, digit-heavy usernames also separate real vs. fake accounts.</div>
         </div>
         <div class="aitem">
             <div class="atitle"><div class="adot" style="background:#a78bfa;box-shadow:0 0 5px #a78bfa;"></div>Network Signals</div>
@@ -432,95 +342,7 @@
         <div class="pt">Live User Scoring — Sample Accounts</div>
         <div class="pbadge" style="color:var(--accent);border-color:var(--accent)">8 accounts</div>
     </div>
-    <div class="ugrid" id="userGrid"><div class="ucard" style="--uc: var(--human); animation-delay: 0s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>SHAQ</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g0" style="width: 0.13%; background: var(--human);"></div></div>
-        <div class="uprob" id="up0" style="color:var(--human)">0.13%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 99.9%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--bot); animation-delay: 0.08s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>JenniferFishpaw</div>
-        <div class="vbadge vbot">BOT</div>
-        <div class="gwrap"><div class="gfill" id="g1" style="width: 56.86%; background: var(--bot);"></div></div>
-        <div class="uprob" id="up1" style="color:var(--bot)">56.86%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 43.1%<br>
-        True: BOT<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--human); animation-delay: 0.16s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>parscale</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g2" style="width: 0.09%; background: var(--human);"></div></div>
-        <div class="uprob" id="up2" style="color:var(--human)">0.09%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 99.9%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--human); animation-delay: 0.24s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>FOX13News</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g3" style="width: 0.12%; background: var(--human);"></div></div>
-        <div class="uprob" id="up3" style="color:var(--human)">0.12%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 99.9%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--bot); animation-delay: 0.32s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>VonteThePlugNC</div>
-        <div class="vbadge vbot">BOT</div>
-        <div class="gwrap"><div class="gfill" id="g4" style="width: 75.84%; background: var(--bot);"></div></div>
-        <div class="uprob" id="up4" style="color:var(--bot)">75.84%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 24.2%<br>
-        True: BOT<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--human); animation-delay: 0.4s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>SpaceX</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g5" style="width: 0.07%; background: var(--human);"></div></div>
-        <div class="uprob" id="up5" style="color:var(--human)">0.07%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 99.9%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--human); animation-delay: 0.48s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>justinbieber</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g6" style="width: 0.16%; background: var(--human);"></div></div>
-        <div class="uprob" id="up6" style="color:var(--human)">0.16%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 99.8%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div><div class="ucard" style="--uc: var(--human); animation-delay: 0.56s;">
-        <div class="correct-tick" style="color:var(--human)">✓</div>
-        <div class="uhandle"><span>@</span>McConaughey</div>
-        <div class="vbadge vhuman">HUMAN</div>
-        <div class="gwrap"><div class="gfill" id="g7" style="width: 0.04%; background: var(--human);"></div></div>
-        <div class="uprob" id="up7" style="color:var(--human)">0.04%</div>
-        <div class="uplabel">Bot Probability</div>
-        <div class="umeta">
-        Auth: 100.0%<br>
-        True: HUMAN<br>
-        Burst: 0.000 · CV: 0.000
-        </div></div></div>
+    <div class="ugrid" id="userGrid"></div>
     </div>
 
     <!-- PIPELINE -->
@@ -552,7 +374,7 @@
         <div class="aarrow">→</div>
         <div class="anode" style="border-top:3px solid #ff4d6d;">
         <div class="ant">Evaluation</div>
-        <div class="and">81.4% accuracy<br>0.8640 AUC-ROC<br>Classification rpt</div>
+        <div class="and">81.3% accuracy<br>0.8656 AUC-ROC<br>Classification rpt</div>
         </div>
         <div class="aarrow">→</div>
         <div class="anode" style="border-top:3px solid #e879f9;">
@@ -567,9 +389,9 @@
     <div class="fl">SENTINEL · Behavior Analytics Hackathon · Problem Statement 3<br>
         Model: XGBoost · Dataset: TwiBot-20 · Features: 27 dimensions</div>
     <div class="fr">
-        <span>ACC: 81.4%</span>
-        <span>AUC: 0.8640</span>
-        <span>F1-Bot: 0.8521</span>
+        <span>ACC: 81.3%</span>
+        <span>AUC: 0.8656</span>
+        <span>F1-Bot: 0.8517</span>
         <span>N: 11,826</span>
     </div>
     </footer>
@@ -577,24 +399,24 @@
 
     <script>
     // ─── DATA FROM PYTHON ─────────────────────────────────────
-    const ACCURACY  = 81.3609;
-    const AUC       = 0.8640;
-    const BOT_REC   = 0.9636;
-    const HUM_PREC  = 0.9317;
+    const ACCURACY  = 81.3187;
+    const AUC       = 0.8656;
+    const BOT_REC   = 0.9628;
+    const HUM_PREC  = 0.9304;
     const TOTAL     = 11826;
-    const TN = 655, FP = 393, FN = 48, TP = 1270;
+    const TN = 655, FP = 393, FN = 49, TP = 1269;
 
-    const FEATURES  = [["verified", 0.8156567215919495], ["description_length", 0.014948044903576374], ["has_url", 0.014533900655806065], ["listed_count", 0.01365908794105053], ["tweet_count", 0.013354270718991756], ["friends_count", 0.012835465371608734], ["followers_count", 0.012740791775286198], ["statuses_count", 0.012384070083498955], ["favourites_count", 0.012248372659087181], ["follower_following_ratio", 0.011941944248974323], ["account_age_days", 0.011933555826544762], ["following_follower_ratio", 0.011922291480004787], ["engagement_rate", 0.01129875797778368], ["name_length", 0.010585902258753777], ["username_digit_ratio", 0.010236880742013454]];
-    const USERS     = [{"handle": "SHAQ", "botProb": 0.13, "authScore": 99.87, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 15349596, "verified": true, "descLen": 50, "accountAge": 6311}, {"handle": "JenniferFishpaw", "botProb": 56.86, "authScore": 43.14, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 0, "verified": false, "descLen": 0, "accountAge": 2015}, {"handle": "parscale", "botProb": 0.09, "authScore": 99.91, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 762839, "verified": true, "descLen": 160, "accountAge": 6301}, {"handle": "FOX13News", "botProb": 0.12, "authScore": 99.88, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 327587, "verified": true, "descLen": 160, "accountAge": 6415}, {"handle": "VonteThePlugNC", "botProb": 75.84, "authScore": 24.16, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 13324, "verified": false, "descLen": 103, "accountAge": 4585}, {"handle": "SpaceX", "botProb": 0.07, "authScore": 99.93, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 12601567, "verified": true, "descLen": 90, "accountAge": 6154}, {"handle": "justinbieber", "botProb": 0.16, "authScore": 99.84, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 112403156, "verified": true, "descLen": 0, "accountAge": 6180}, {"handle": "McConaughey", "botProb": 0.04, "authScore": 99.96, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 2656850, "verified": true, "descLen": 82, "accountAge": 6071}];
-    const ROC       = {"fpr": [0.0, 0.0038, 0.0086, 0.0153, 0.02, 0.0267, 0.0324, 0.0382, 0.0429, 0.0487, 0.0544, 0.0601, 0.0658, 0.0706, 0.0754, 0.0802, 0.0849, 0.0906, 0.0983, 0.1059, 0.1135, 0.1183, 0.124, 0.1288, 0.1355, 0.145, 0.1498, 0.1565, 0.1641, 0.1727, 0.1794, 0.1851, 0.1956, 0.2004, 0.2061, 0.2109, 0.2176, 0.2223, 0.2309, 0.2395, 0.249, 0.2557, 0.2634, 0.2691, 0.2758, 0.2834, 0.2891, 0.2948, 0.3006, 0.312, 0.3187, 0.3282, 0.3368, 0.3464, 0.3531, 0.3626, 0.3712, 0.3865, 0.395, 0.4103, 0.4256, 0.438, 1.0], "tpr": [0.0, 0.041, 0.0607, 0.0819, 0.1373, 0.1806, 0.2185, 0.2458, 0.2845, 0.302, 0.3255, 0.346, 0.3687, 0.3976, 0.4143, 0.431, 0.4552, 0.478, 0.497, 0.522, 0.541, 0.5554, 0.5653, 0.5873, 0.6032, 0.6115, 0.6199, 0.6388, 0.6502, 0.6616, 0.6745, 0.6821, 0.692, 0.7033, 0.7185, 0.7276, 0.7496, 0.7633, 0.7754, 0.7876, 0.8012, 0.8164, 0.8293, 0.8384, 0.8505, 0.8589, 0.871, 0.8786, 0.8885, 0.8991, 0.9105, 0.9181, 0.9279, 0.9325, 0.9461, 0.9522, 0.9605, 0.975, 0.9825, 0.9901, 0.9947, 0.9992, 1.0]};
+    const FEATURES  = [["verified", 0.8147503137588501], ["description_length", 0.01503655593842268], ["has_url", 0.014741381630301476], ["listed_count", 0.013783392496407032], ["followers_count", 0.013108481653034687], ["friends_count", 0.012800994329154491], ["tweet_count", 0.012746118940412998], ["follower_following_ratio", 0.012599044479429722], ["statuses_count", 0.012458165176212788], ["favourites_count", 0.012172087095677853], ["following_follower_ratio", 0.011950487270951271], ["account_age_days", 0.011893091723322868], ["engagement_rate", 0.011164018884301186], ["username_digit_ratio", 0.010550105012953281], ["name_length", 0.010509321466088295]];
+    const USERS     = [{"handle": "SHAQ", "botProb": 0.1, "authScore": 99.9, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 15349596, "verified": true, "descLen": 50, "accountAge": 6313}, {"handle": "JenniferFishpaw", "botProb": 63.38, "authScore": 36.62, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 0, "verified": false, "descLen": 0, "accountAge": 2017}, {"handle": "parscale", "botProb": 0.07, "authScore": 99.93, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 762839, "verified": true, "descLen": 160, "accountAge": 6304}, {"handle": "FOX13News", "botProb": 0.11, "authScore": 99.89, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 327587, "verified": true, "descLen": 160, "accountAge": 6417}, {"handle": "VonteThePlugNC", "botProb": 75.62, "authScore": 24.38, "verdict": "BOT", "trueLabel": "BOT", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 13324, "verified": false, "descLen": 103, "accountAge": 4587}, {"handle": "SpaceX", "botProb": 0.07, "authScore": 99.93, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 12601567, "verified": true, "descLen": 90, "accountAge": 6157}, {"handle": "justinbieber", "botProb": 0.11, "authScore": 99.89, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 112403156, "verified": true, "descLen": 0, "accountAge": 6183}, {"handle": "McConaughey", "botProb": 0.04, "authScore": 99.96, "verdict": "HUMAN", "trueLabel": "HUMAN", "correct": true, "dailyCV": 0.0, "timingStd": 0.0, "burst": 0.0, "followers": 2656850, "verified": true, "descLen": 82, "accountAge": 6074}];
+    const ROC       = {"fpr": [0.0, 0.0038, 0.0134, 0.02, 0.0248, 0.0296, 0.0353, 0.041, 0.0468, 0.0525, 0.0582, 0.0639, 0.0697, 0.0744, 0.0792, 0.0849, 0.0897, 0.0973, 0.105, 0.1107, 0.1155, 0.1231, 0.1279, 0.1345, 0.1393, 0.1441, 0.1517, 0.1613, 0.166, 0.1727, 0.1794, 0.1861, 0.1918, 0.1994, 0.2052, 0.2109, 0.2166, 0.2214, 0.229, 0.2338, 0.2414, 0.25, 0.2576, 0.2643, 0.2719, 0.2777, 0.2891, 0.2948, 0.3025, 0.3092, 0.3149, 0.3206, 0.3292, 0.3387, 0.3464, 0.3521, 0.3607, 0.376, 0.3845, 0.3979, 0.4055, 0.416, 0.4313, 1.0], "tpr": [0.0, 0.0326, 0.0766, 0.1123, 0.1737, 0.2071, 0.2534, 0.2762, 0.302, 0.33, 0.3452, 0.3642, 0.3816, 0.4082, 0.4256, 0.4446, 0.4697, 0.4788, 0.5076, 0.5235, 0.5364, 0.5539, 0.5698, 0.5873, 0.5994, 0.6123, 0.6313, 0.6419, 0.651, 0.6631, 0.6836, 0.692, 0.7117, 0.7253, 0.7436, 0.7511, 0.764, 0.7754, 0.7868, 0.7967, 0.8149, 0.824, 0.8392, 0.846, 0.8558, 0.8627, 0.8695, 0.8771, 0.8847, 0.893, 0.9006, 0.9158, 0.9241, 0.9325, 0.9401, 0.9484, 0.9583, 0.9643, 0.9727, 0.9803, 0.9848, 0.9917, 0.9962, 1.0]};
 
     const RADAR_VALS = [
-    0.9317, // Human Precision
+    0.9304, // Human Precision
     0.6250,  // Human Recall
-    0.7637, // Bot Precision
-    0.9636,  // Bot Recall
-    0.8521,   // F1 Bot
-    0.8640,    // AUC-ROC
+    0.7635, // Bot Precision
+    0.9628,  // Bot Recall
+    0.8517,   // F1 Bot
+    0.8656,    // AUC-ROC
     ];
 
     // ─── ANIMATED COUNTERS ───────────────────────────────────
@@ -813,5 +635,5 @@
     setTimeout(drawROC, 900);
     })();
     </script>
-    
-    </body></html>
+    </body>
+    </html>
